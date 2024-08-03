@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Table(name = "Operation")
-public class Operation {
+public abstract class Operation {
 
     // attributs
 

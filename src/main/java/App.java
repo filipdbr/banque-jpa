@@ -1,12 +1,16 @@
 import entites.Banque;
+import entites.Virement;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+
+import java.time.LocalDateTime;
 
 public class App {
 
     public static void main(String[] args) {
 
+        /*
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("banque");
         EntityManager em = emf.createEntityManager();
 
@@ -18,6 +22,11 @@ public class App {
         em.getTransaction().commit();
         em.close();
         emf.close();
+         */
+
+        Virement v = new Virement(LocalDateTime.now(), 1000, "internal", "Filip Dabrowski");
+
+        System.out.println(v);
 
     }
 }

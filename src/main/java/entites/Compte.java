@@ -14,7 +14,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "Compte")
-public class Compte {
+public abstract class Compte {
 
     // attributs
 
