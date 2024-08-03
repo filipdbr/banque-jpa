@@ -49,6 +49,16 @@ public class Client {
     private LocalDate dateNaissance;
 
     /**
+     * Adresse du client
+     * <p>
+     * L'annotation `@Embedded` indique que cette classe fait partie intégrante de l'entité `Client`
+     * et que ses attributs seront stockés dans la même table que l'entité propriétaire.
+     * </p>
+     */
+    @Embedded
+    private Adresse adresse;
+
+    /**
      * La relation entre la banque et le client
      * Dans notre modèle, un client ne peut être affecté qu'à une seule banque.
      */

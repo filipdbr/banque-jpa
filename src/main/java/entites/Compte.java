@@ -14,6 +14,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "Compte")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Compte {
 
     // attributs

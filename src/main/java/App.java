@@ -10,7 +10,6 @@ public class App {
 
     public static void main(String[] args) {
 
-        /*
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("banque");
         EntityManager em = emf.createEntityManager();
 
@@ -22,11 +21,5 @@ public class App {
         em.getTransaction().commit();
         em.close();
         emf.close();
-         */
-
-        Virement v = new Virement(LocalDateTime.now(), 1000, "internal", "Filip Dabrowski");
-
-        System.out.println(v);
-
     }
 }
