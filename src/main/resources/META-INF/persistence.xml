@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+             version="3.1">
+
+
+  <!-- Unité de persistance nommée "banque" -->
+  <persistence-unit name="banque">
+    <!-- Fournisseur de persistance Hibernate -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <properties>
+      <!-- URL de connexion à la base de données -->
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://127.0.0.1:3308/banque"/>
+      <!-- Nom d'utilisateur pour la base de données -->
+      <property name="jakarta.persistence.jdbc.user" value="root"/>
+      <!-- Mot de passe pour la base de données (pour moi, pas de mdp) -->
+      <property name="jakarta.persistence.jdbc.password" value=""/>
+
+      <!-- Action de génération du schéma de la base de données -->
+      <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <!-- Mise à jour automatique du schéma de la base de données -->
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <!-- Affichage des requêtes SQL dans la console -->
+      <property name="hibernate.show_sql" value="true"/>
+      <!-- Formatage des requêtes SQL affichées -->
+      <property name="format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+
+</persistence>
