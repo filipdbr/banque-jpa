@@ -155,6 +155,16 @@ public abstract class Compte {
     }
 
     /**
+     * Ajouter un client au compte
+     *
+     * @param client est un client a ajouter
+     */
+    public void addClient(Client client) {
+        this.clients.add(client);
+        client.getComptes().add(this);
+    }
+
+    /**
      * Retourne une représentation textuelle de l'objet Compte
      *
      * @return une chaîne de caractères représentant l'objet Compte

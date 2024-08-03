@@ -23,6 +23,12 @@ public class Adresse {
     private int id;
 
     /**
+     * Numero de la rue
+     */
+    @Column(name = "numero")
+    private int numero;
+
+    /**
      * Nom de la rue
      */
     @Column(name = "rue")
@@ -51,13 +57,13 @@ public class Adresse {
     /**
      * Constructeur avec paramètres pour initialiser les attributs de l'adresse
      *
-     * @param id Identifiant unique de l'adresse
+     * @param numero Numero de la rue
      * @param rue Nom de la rue
      * @param codePostal Code postal
      * @param ville Ville
      */
-    public Adresse(int id, String rue, int codePostal, String ville) {
-        this.id = id;
+    public Adresse(int numero, String rue, int codePostal, String ville) {
+        this.numero = numero;
         this.rue = rue;
         this.codePostal = codePostal;
         this.ville = ville;
@@ -81,6 +87,24 @@ public class Adresse {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * Retourne le numero de la rue
+     *
+     * @return le numero de la rue
+     */
+    public int getNumero() {
+        return numero;
+    }
+
+    /**
+     * Modifie le numero de la rue
+     *
+     * @param numero le nouveau numero de la rue
+     */
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     /**
@@ -146,6 +170,7 @@ public class Adresse {
     public String toString() {
         return "Adresse{" +
                 "id=" + id +
+                ", numero=" + numero +
                 ", rue='" + rue + '\'' +
                 ", codePostal=" + codePostal +
                 ", ville='" + ville + '\'' +

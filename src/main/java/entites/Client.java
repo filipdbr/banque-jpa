@@ -217,6 +217,33 @@ public class Client {
     }
 
     /**
+     * Retourne Adresse de client
+     *
+     * @return adresse de client
+     */
+    public Adresse getAdresse() {
+        return adresse;
+    }
+
+    /**
+     * Modifie l'adresse de client
+     *
+     * @param adresse le nouvelle adresse de client
+     */
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
+    }
+
+    /**
+     * Ajoute un nouveau compte à la liste des comptes du client
+     * @param compte est un compte a ajouter
+     */
+    public void addCompte(Compte compte) {
+        this.comptes.add(compte);
+        compte.getClients().add(this);
+    }
+
+    /**
      * Retourne une représentation textuelle de l'objet Client
      *
      * @return une chaîne de caractères représentant l'objet Client : id, nom et prénom sans de date de naissance
