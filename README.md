@@ -1,4 +1,4 @@
-<h1>Projet Banque-JPA</h1>
+<h1>Projet Banque - JPA</h1>
 
 <h2>Description</h2>
 Ce projet est une implémentation complète des exercices de TP 4 et 5 de mon cours sur la modélisation JPA (Java Persistence API) chez Diginamic.
