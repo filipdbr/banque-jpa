@@ -1,5 +1,7 @@
 package entites;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 /**
@@ -10,13 +12,26 @@ import java.time.LocalDateTime;
  * - Noms de colonnes en snake_case
  * </p>
  */
+@Entity
+@Table(name = "Operation")
 public class Virement extends Operation {
 
     // attributs
 
     /**
+     * <b>Map de variables</b>
+     *
+     * Identifiant unique du virement
+     */
+    @Id
+    @GeneratedValue (strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private int id;
+
+    /**
      * Le bénéficiaire du virement
      */
+    @Column(name = "beneficiaire")
     private String beneficiaire;
 
     // constructeurs

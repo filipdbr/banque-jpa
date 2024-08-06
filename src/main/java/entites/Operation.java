@@ -148,6 +148,24 @@ public abstract class Operation {
     }
 
     /**
+     * Retourne le compte attaché a cette opérqtion
+     *
+     * @return le compte attaché a cette opérqtion
+     */
+    public Compte getCompte() {
+        return compte;
+    }
+
+    /**
+     * Modifie le compte attaché a cette opérqtion
+     *
+     * @param compte le nouveau compte
+     */
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
+
+    /**
      * Retourne une représentation textuelle de l'objet Operation
      *
      * @return une chaîne de caractères représentant l'objet Operation

@@ -165,6 +165,16 @@ public abstract class Compte {
     }
 
     /**
+     * Ajouter un operation au compte
+     *
+     * @param operation indique une operation a ajouté
+     */
+    public void addOperation(Operation operation) {
+        this.operations.add(operation);
+        operation.setCompte(this);
+    }
+
+    /**
      * Retourne une représentation textuelle de l'objet Compte
      *
      * @return une chaîne de caractères représentant l'objet Compte

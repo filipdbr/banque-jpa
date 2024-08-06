@@ -1,5 +1,10 @@
 package entites;
 
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
 
 /**
@@ -10,6 +15,8 @@ import java.time.LocalDate;
  * - Noms de colonnes en snake_case
  * </p>
  */
+@Entity
+@Table(name = "AssuranceVie")
 public class AssuranceVie extends Compte {
 
     // attributs
@@ -17,11 +24,13 @@ public class AssuranceVie extends Compte {
     /**
      * Date de fin de l'assurance vie
      */
+    @Column(name = "date_fin")
     private LocalDate dateFin;
 
     /**
      * Taux d'intérêt de l'assurance vie
      */
+    @Column(name = "taux")
     private double taux;
 
     // constructeurs

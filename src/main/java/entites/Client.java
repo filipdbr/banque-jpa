@@ -73,7 +73,7 @@ public class Client {
     @ManyToMany
     @JoinTable(
             name = "banque_compte",
-            joinColumns = @JoinColumn(name = "banque_id", referencedColumnName = "id"),
+            joinColumns = @JoinColumn(name = "client_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "compte_id", referencedColumnName = "id")
     )
     private Set<Compte> comptes;

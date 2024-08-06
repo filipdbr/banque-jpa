@@ -13,16 +13,6 @@ public class Adresse {
     // attributs
 
     /**
-     * Identifiant unique de l'adresse
-     * <p>
-     * Cet attribut ne sera pas utilisé comme clé primaire car il s'agit d'une entité intégrée.
-     * Cependant, il est inclus pour l'identification logique.
-     * </p>
-     */
-    @Column(name = "id")
-    private int id;
-
-    /**
      * Numero de la rue
      */
     @Column(name = "numero")
@@ -70,24 +60,6 @@ public class Adresse {
     }
 
     // méthodes
-
-    /**
-     * Retourne l'identifiant unique de l'adresse
-     *
-     * @return l'identifiant unique de l'adresse
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Modifie l'identifiant unique de l'adresse
-     *
-     * @param id le nouvel identifiant unique de l'adresse
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
 
     /**
      * Retourne le numero de la rue
@@ -169,7 +141,6 @@ public class Adresse {
     @Override
     public String toString() {
         return "Adresse{" +
-                "id=" + id +
                 ", numero=" + numero +
                 ", rue='" + rue + '\'' +
                 ", codePostal=" + codePostal +

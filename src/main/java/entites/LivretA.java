@@ -1,5 +1,7 @@
 package entites;
 
+import jakarta.persistence.*;
+
 /**
  * Représente un Livret A, un type spécifique de compte bancaire
  *  * <p>
@@ -8,9 +10,13 @@ package entites;
  *  * - Noms de colonnes en snake_case
  *  * </p>
  */
+@Entity
+@Table(name = "LivretA")
 public class LivretA extends Compte {
 
     // attributs
+
+    @Column(name = "taux")
     private double taux;
 
     // constructeurs

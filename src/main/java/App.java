@@ -48,22 +48,51 @@ public class App {
         client2.setAdresse(adresse2);
         client3.setAdresse(adresse3);
 
+        // Attacher des banques aux clients
+        client1.setBanque(filipBanque);
+        client2.setBanque(bnp);
+        client3.setBanque(hsbc);
+
         // Attacher des comptes aux clients
         // Selon le modèle, un compte peut être attribué à plusieurs clients (look: client 2 et 3)
         client1.addCompte(livret1);
         client2.addCompte(assurance1);
         client3.addCompte(assurance1);
 
-        /* todo
-            1. link virements to transactions
-            2. create a database
+        // Attache des virements aux comptes
+        /* Commentaire: ces transactions n'ont aucun sens dans le monde réel
+        (par exemple les virements de compte d'assurance).
+        Elles servent uniquement à montrer que le code fonctione
          */
+        virement1.setCompte(livret1);
+        virement2.setCompte(livret1);
+        virement3.setCompte(assurance1);
+        virement4.setCompte(livret1);
+        virement5.setCompte(assurance1);
 
-        Banque banque = new Banque();
+        // Persister les entités dans la base de données
+        em.persist(hsbc);
+        em.persist(bnp);
+        em.persist(filipBanque);
+        em.persist(client1);
+        em.persist(client2);
+        em.persist(client3);
+        em.persist(livret1);
+        em.persist(assurance1);
+        em.persist(virement1);
+        em.persist(virement2);
+        em.persist(virement3);
+        em.persist(virement4);
+        em.persist(virement5);
 
-        em.persist(banque);
+        // // Valider la transaction
         em.getTransaction().commit();
+
+        // Fermer l'EntityManager and l'EntityManagerFactory
         em.close();
         emf.close();
+
+        // C'est fini! :)
+
     }
 }

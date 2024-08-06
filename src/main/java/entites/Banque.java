@@ -38,7 +38,7 @@ public class Banque {
      * La relation entre la banque est les clients
      * Un banque peut posseder plusieurs clients
      */
-    @OneToMany(mappedBy = "Banque")
+    @OneToMany(mappedBy = "banque")
     private Set<Client> clients;
 
     /**
