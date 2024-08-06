@@ -19,7 +19,7 @@ L'objectif est de renforcer les compétences en modélisation JPA, y compris l'u
         Insertion d'un compte associé à deux clients : le compte d'assurance vie (assurance1) est associé à la fois au client 2 (Kanye West) et au client 3 (Zinedine Zidane).
         Insertion d'un client avec plusieurs comptes : le client 1 (Filip Dabrowski) possède deux comptes :
 
-    Fonctionnalités Supplémentaires :
+    3. Fonctionnalités Supplémentaires :
         Insertion de plusieurs opérations de Virement pour démontrer la gestion des transactions.
 
 <h2>Structure du Projet</h2>
@@ -27,12 +27,9 @@ L'objectif est de renforcer les compétences en modélisation JPA, y compris l'u
     Package des Entités (entites) : Contient toutes les classes d'entités avec les annotations JPA appropriées.
     Classe Principale (App) : Le point d'entrée de l'application, responsable de la création d'un EntityManager, de la gestion des transactions et de la persistance des entités.
 
-<h2>Notes</h2>
-Implémentation Manuelle : Tout le code et la logique ont été crée par l'auteur. 
-
-Cependant, la génération des opérations de virement a été automatisée à l'aide de l'IA, en raison de sa nature répétitive. De plus, ce fichier README a été rédigé avec l'aide de l'IA pour assurer une présentation claire et cohérente.
-
-L'intégralité du fichier README a été vérifiée par l'auteur.
+<h2>Commentaire de l'auteur</h2>
+<p></p>Tout le code et la logique ont été crée par l'auteur, sans utiliser l'IA.</p>
+<p>Cependant, la génération des opérations de virements, en raison de sa nature répétitive a été automatisée à l'aide de l'IA. De plus, ce fichier README a été rédigé avec l'aide de l'IA pour assurer une présentation claire et cohérente. L'intégralité du fichier README a été vérifiée par l'auteur.</p>
 
 <h2>Comment Exécuter</h2>
 
