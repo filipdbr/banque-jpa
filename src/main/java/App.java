@@ -35,6 +35,7 @@ public class App {
         // 4. Comptes
         LivretA livret1 = new LivretA("1294338l",10019.12,0.05);
         AssuranceVie assurance1 = new AssuranceVie("214332a", 1000.00, LocalDate.of(2090,10,01),0.01);
+        AssuranceVie assurance2 = new AssuranceVie("222333b", 20500, LocalDate.of(2081,01,01),0.014);
 
         // 5. Virements (Généré en IA par Filip :))
         Virement virement1 = new Virement(LocalDateTime.of(2023, 8, 1, 10, 30), 200.0, "Paiement facture", "Alice Dupont");
@@ -55,9 +56,12 @@ public class App {
 
         // Attacher des comptes aux clients
         // Selon le modèle, un compte peut être attribué à plusieurs clients (look: client 2 et 3)
+        // Le client 1 aura 2 comptes comme demandé dans TP5
+        // Aussi, il y a un compte associé au 2 clients : accurance 1 (comme demandé dans TP5)
         client1.addCompte(livret1);
         client2.addCompte(assurance1);
         client3.addCompte(assurance1);
+        client1.addCompte(assurance2);
 
         // Attache des virements aux comptes
         /* Commentaire: ces transactions n'ont aucun sens dans le monde réel
@@ -79,13 +83,14 @@ public class App {
         em.persist(client3);
         em.persist(livret1);
         em.persist(assurance1);
+        em.persist(assurance2);
         em.persist(virement1);
         em.persist(virement2);
         em.persist(virement3);
         em.persist(virement4);
         em.persist(virement5);
 
-        // // Valider la transaction
+        // Valider la transaction
         em.getTransaction().commit();
 
         // Fermer l'EntityManager and l'EntityManagerFactory
